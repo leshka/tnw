@@ -1,0 +1,24 @@
+type Query {
+    news(category: String, limit: Int!, offset: Int=0): PaginatedNews
+    search(query: String!, limit: Int!, offset: Int=0): PaginatedNews
+    articleBySlug(slug: String!): Article
+}
+
+type PaginatedNews {
+    totalCount: Int!
+    items: [Article!]!
+    pageInfo: PageInfo!
+}
+
+type PageInfo {
+    hasNextPage: Boolean!
+}
+
+type Article {
+    id: ID!
+    title: String!
+    slug: String!
+    content: String!
+    categories: [String!]!
+    media: String!
+}

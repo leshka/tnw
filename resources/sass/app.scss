@@ -1,0 +1,39 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.news {
+    display: flex;
+    flex-wrap: wrap;
+}
+.news .article {
+    width: calc(25% - 1rem);
+    margin: .5rem;
+
+    @media only screen and (max-width: 1024px) {
+        width: calc(33% - 1rem);
+    }
+    @media only screen and (max-width: 768px) {
+        width: calc(50% - 1rem);
+    }
+    @media only screen and (max-width: 576px) {
+        width: 100%;
+        margin: 0 0 .5rem;
+    }
+}
+.controls, .searchStat {
+    margin: 0 .5rem .5rem;
+}
+.news-category {
+    margin: 0 .5rem 0 0;
+}
